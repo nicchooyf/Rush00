@@ -6,7 +6,7 @@
 /*   By: nichoo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/09 15:36:02 by nichoo            #+#    #+#             */
-/*   Updated: 2025/08/10 11:56:57 by nichoo           ###   ########.fr       */
+/*   Updated: 2025/08/10 13:32:21 by nichoo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -34,7 +34,8 @@ int	is_number(char *s)
 }
 
 /*
-*	Takes a string input and converts it into an integer
+*	Takes a string input and converts it into an integer.
+*	Crude implementation.
 */
 int	ft_atoi(char *s)
 {
@@ -60,6 +61,13 @@ void	print_error(void)
 	write(2, "ERROR!!!", 8);
 }
 
+/*
+*	Main function
+*
+*	Takes string arguments from the command line
+*	and passes them through ft_atoi to get integers.
+*	Sanitizes inputs for 2 arguments, and for arguments to be >= 0.
+*/
 int	main(int ac, char **av)
 {
 	int	x;
